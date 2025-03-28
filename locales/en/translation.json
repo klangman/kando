@@ -213,6 +213,9 @@
     }
   },
   "backends": {
+    "cinnamon": {
+      "error": "Could not connect to Kando Cinnamon Integration extension. You can install it from Menu->Preferences->Extensions or get it from here: {{- link}}"
+    },
     "gnome": {
       "error": "Could not connect to Kando Integration GNOME Shell extension. You can get it from here: {{- link}}"
     },

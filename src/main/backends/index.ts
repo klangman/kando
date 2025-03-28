@@ -67,6 +67,12 @@ export function getBackend(): Backend | null {
       return new CinnamonBackend();
     }
 
+    if (desktop === 'x-cinnamon' && session === 'wayland') {
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      const { CinnamonWaylandBackend } = require('./linux/cinnamon/wayland/backend');
+      return new CinnamonWaylandBackend();
+    }
+
     if (session === 'x11') {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       const { X11Backend } = require('./linux/x11/backend');
